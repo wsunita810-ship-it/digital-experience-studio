@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Chip, Reveal, Section, SectionHead } from "./primitives";
+import { Chip, Reveal, Section, SectionHead, type ChipTone } from "./primitives";
 import { EvidenceGraph } from "./evidence-graph";
 import { NodeIcon, type NodeIconKey } from "./icons";
 
@@ -469,7 +469,7 @@ function Spec({ label, children }: { label: string; children: React.ReactNode })
   );
 }
 
-const CASE_STATES: { label: string; tone: Parameters<typeof Chip>[0]["tone"] }[] = [
+const CASE_STATES: { label: string; tone: ChipTone }[] = [
   { label: "Collecting", tone: "reported" },
   { label: "Explaining", tone: "reported" },
   { label: "Critiquing", tone: "reported" },
